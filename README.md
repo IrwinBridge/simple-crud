@@ -17,6 +17,18 @@ sudo apt update
 sudo apt install -y mongodb
 ```
 
+### *Dependencies installation (For MacOS using brew):*
+- node.js & npm:
+```
+brew install node
+```
+- MongoDB:
+```
+brew tap mongodb/brew
+brew install mongodb-community@4.0
+brew services start mongodb-community@4.0
+```
+
 ### *Install:*
 1. ``` git clone https://github.com/IrwinBridge/simple-crud.git simple-crud ```
 2.  ```cd simple-crud ```

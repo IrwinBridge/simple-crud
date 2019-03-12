@@ -13,8 +13,11 @@
 3. ``` npm i ```
 
 *Run:*
+
 ``` npm run serve ```
+
 *OR*
+
 1.  ```npm run build ```
 2.  ```node node/app.js ```
 

@@ -8,7 +8,7 @@
 ### *Dependencies installation (For Ubuntu):*
 - node.js & npm:
 ```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt-get install -y nodejs
 ```
 - MongoDB:

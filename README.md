@@ -42,12 +42,12 @@ choco install mongodb -y
 C:\Program Files\MongoDB\Server\4.0\bin\mongod --install
 ```
 
-### *Build:*
+## Build
 1. ``` git clone https://github.com/IrwinBridge/simple-crud.git simple-crud ```
 2.  ```cd simple-crud ```
 3. ``` npm i ```
 
-### *Run:*
+## Run
 
 ``` npm run serve ```
 
@@ -56,10 +56,10 @@ C:\Program Files\MongoDB\Server\4.0\bin\mongod --install
 1.  ```npm run build ```
 2.  ```node node/app.js ```
 
-### *Test:*
+## Test
 - API Swagger documentation: http://localhost:3000/api-docs
 - Web application: http://localhost:3000
 
-### *Few notes:*
+## Few notes
 - All Front-end Vue code is in "front" folder
 - All Back-end node-express-mongoose code is in "node" folder

@@ -1,4 +1,5 @@
-# Simple CRUD app using MEVN stack
+# CRUD
+Simple CRUD app using Node.js, Express.js, MongoDB and Vue.js.
 
 ## Dependencies installation
 

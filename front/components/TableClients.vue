@@ -1,33 +1,33 @@
 <template>
-    <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-            <thead class="thead-light">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Providers</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="client in clients" :key="client._id">
-                    <td class="align-middle">{{ client.name }}</td>
-                    <td class="align-middle">{{ client.email }}</td>
-                    <td class="align-middle">{{ client.phone }}</td>
-                    <td class="align-middle">{{ client.providers.map(e => {
-                                    return e.name;
-                            }).join(', ')
-                        }}
-                    </td>
-                    <td class="d-flex justify-content-center">
-                        <button-client-edit :id="client._id" class="mr-3"></button-client-edit>
-                        <button-client-delete :id="client._id"></button-client-delete>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-responsive table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th class="pl-4">Name</th>
+                <th class="pl-4">Email</th>
+                <th class="pl-4">Phone</th>
+                <th class="pl-4">Providers</th>
+                <th class="fit"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="client in clients" :key="client._id">
+                <td class="align-middle pl-4 py-3">{{ client.name }}</td>
+                <td class="align-middle pl-4 py-3">{{ client.email }}</td>
+                <td class="align-middle pl-4 py-3">{{ client.phone }}</td>
+                <td class="align-middle pl-4 py-3">{{ client.providers.map(e => {
+                                return e.name;
+                        }).join(', ')
+                    }}
+                </td>
+                <td class="fit px-4 py-3">
+                    <div>
+                        <button-client-edit :id="client._id" class="mr-2"></button-client-edit>
+                        <button-client-delete :id="client._id" class="ml-1"></button-client-delete>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </template>
 
 <script>
@@ -64,3 +64,10 @@ export default {
     }
 };
 </script>
+
+<style>
+.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn btn-light" @click="showModal()">New Client</button>
+    <button type="button" class="btn btn-primary" @click="showModal()">New Client</button>
 </template>
 
 <script>

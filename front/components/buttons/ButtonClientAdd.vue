@@ -36,12 +36,20 @@ export default {
         addClient() {
             if (this.isFormValid(this.client)) {
                 const uri = 'http://localhost:3000/api/clients';
-                this.axios.post(uri, this.client).then((res) => {
+                this.axios.post(uri, this.client)
+                .then((res) => {
                     console.log(res.data);
                     EventBus.$emit('clients-changed');
                     EventBus.$emit('close-modal');
                     this.client = {};
                     EventBus.$emit('show-toast', 'Client was successfully created');
+                })
+                .catch((err) => {
+                    EventBus.$emit('form-errors', {
+                        name: '',
+                        email: 'Client with this email already exists',
+                        phone: ''
+                    });
                 });
             } else
                 EventBus.$emit('form-errors', this.errors);

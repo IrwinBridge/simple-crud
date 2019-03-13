@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn btn-light" v-on:click="showModalEdit(id)">Edit</button>
+    <button type="button" class="btn btn-outline-secondary btn-color" v-on:click="showModalEdit(id)">Edit</button>
 </template>
 
 <script>
@@ -19,3 +19,9 @@ export default {
     }
 };
 </script>
+
+<style>
+.btn-color {
+    border-color: #d9e4ff !important;
+}
+</style>

@@ -49,7 +49,9 @@ C:\Program Files\MongoDB\Server\4.0\bin\mongod --install
 
 ## Run
 
-``` npm run serve ```
+```
+npm run serve
+```
 
 *OR*
 

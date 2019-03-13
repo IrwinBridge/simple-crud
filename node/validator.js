@@ -4,7 +4,7 @@ function validateClient(body) {
     const schema = {
         name: Joi.string().min(3).max(80).required(),
         email: Joi.string().email().required(),
-        phone: Joi.string().min(11).required(),
+        phone: Joi.string().required(),
         providers: Joi.array().required()
     }
     return Joi.validate(body, schema);

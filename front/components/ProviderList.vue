@@ -63,13 +63,17 @@ export default {
             });
         },
         editProvider() {
-            const uri = 'http://localhost:3000/api/providers/' + this.providerForChange._id;
+            const _id = this.providerForChange._id;
+            const uri = 'http://localhost:3000/api/providers/' + _id
             delete this.providerForChange._id;
             this.axios.put(uri, this.providerForChange).then((res) => {
                 console.log(res.data);
                 EventBus.$emit('providers-changed');
                 EventBus.$emit('clients-changed');
                 this.providerForChange = {};
+            }).catch((err) => {
+                console.error(err);
+                this.providerForChange._id = _id;
             });
         },
         deleteProvider(id) {

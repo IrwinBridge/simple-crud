@@ -6,6 +6,7 @@
         </div>
         <table-clients></table-clients>
         <modal-client></modal-client>
+        <toast></toast>
     </div>
 </template>
 
@@ -13,12 +14,14 @@
 import ButtonClientNew from './components/buttons/ButtonClientNew.vue';
 import TableClients from './components/TableClients.vue';
 import ModalClient from './components/ModalClient.vue';
+import Toast from './components/Toast.vue';
 
 export default {
     components: {
         ButtonClientNew,
         TableClients,
-        ModalClient
+        ModalClient,
+        Toast
     }
 };
 </script>

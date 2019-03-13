@@ -19,6 +19,7 @@ export default {
                 console.log(res.data);
                 EventBus.$emit('clients-changed');
                 EventBus.$emit('close-modal');
+                EventBus.$emit('show-toast', 'Client was successfully deleted');
             });
         }
     }

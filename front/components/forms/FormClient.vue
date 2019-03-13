@@ -2,14 +2,17 @@
     <form>
         <div class="form-group">
             <label>Name:</label>
+            <div v-if="errors.name.length" class="alert alert-danger" role="alert">{{ errors.name }}</div>
             <input type="text" class="form-control" v-model="client.name"/>
         </div>
         <div class="form-group">
             <label>Email:</label>
+            <div v-if="errors.email.length" class="alert alert-danger" role="alert">{{ errors.email }}</div>
             <input type="text" class="form-control" v-model="client.email"/>
         </div>
         <div class="form-group">
             <label>Phone:</label>
+            <div v-if="errors.phone.length" class="alert alert-danger" role="alert">{{ errors.phone }}</div>
             <input type="text" class="form-control" v-model="client.phone"/>
         </div>
         <form-provider-add></form-provider-add>
@@ -33,14 +36,30 @@ export default {
     },
     data() {
         return {
-            client: {},
-            clientProviders: []
+            client: {
+                name: '',
+                email: '',
+                phone: '',
+                providers: []
+            },
+            clientProviders: [],
+            errors: {
+                name: '',
+                email: '',
+                phone: ''
+            }
         };
+    },
+    created() {
     },
     mounted() {
         this.getClient(this.$props.id);
-        EventBus.$on('client-providers-changed', (providers) => {
+        EventBus
+        .$on('client-providers-changed', (providers) => {
             this.client.providers = providers;
+        })
+        .$on('form-errors', (errors) => {
+            this.errors = errors;
         });
     },
     methods: {

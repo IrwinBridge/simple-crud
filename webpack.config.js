@@ -12,7 +12,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './front/index.html'
+            template: './front/index.html',
+            favicon: './front/images/favicon.ico'
         }),
         new VueLoaderPlugin()
     ],

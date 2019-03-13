@@ -1,5 +1,4 @@
-# simple-crud
-## Simple CRUD app using MEVN stack
+# Simple CRUD app using MEVN stack
 
 ### *Prerequisites:*
 - node.js with npm (v10.15.2 or higher)

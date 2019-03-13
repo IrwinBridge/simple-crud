@@ -53,7 +53,7 @@ C:\Program Files\MongoDB\Server\4.0\bin\mongod --install
 
 *OR*
 
-``
+```
 npm run build
 node node/app.js
 ```

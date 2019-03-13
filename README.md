@@ -1,10 +1,12 @@
 # Simple CRUD app using MEVN stack
 
+## Dependencies installation
+
 ### *Prerequisites:*
 - node.js with npm (v10.15.2 or higher)
 - MongoDB (v3.6.3 or higher)
 
-### *Dependencies installation (For Ubuntu):*
+### *For Ubuntu:*
 - node.js & npm:
 ```
 sudo curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
@@ -16,7 +18,7 @@ sudo apt update
 sudo apt install -y mongodb
 ```
 
-### *Dependencies installation (For MacOS using brew):*
+### *For MacOS using brew:*
 - node.js & npm:
 ```
 brew install node
@@ -28,7 +30,7 @@ brew install mongodb-community@4.0
 brew services start mongodb-community@4.0
 ```
 
-### *Dependencies installation (For Windows using chocolatey):*
+### *For Windows using chocolatey:*
 - node.js & npm:
 ```
 choco install nodejs-lts -y

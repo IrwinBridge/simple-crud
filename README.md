@@ -40,7 +40,7 @@ choco install mongodb -y
 C:\Program Files\MongoDB\Server\4.0\bin\mongod --install
 ```
 
-### *Install:*
+### *Build:*
 1. ``` git clone https://github.com/IrwinBridge/simple-crud.git simple-crud ```
 2.  ```cd simple-crud ```
 3. ``` npm i ```

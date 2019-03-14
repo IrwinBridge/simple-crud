@@ -14,7 +14,7 @@ export default {
     },
     methods: {
         deleteClient(id) {
-            const uri = 'http://localhost:3000/api/clients/' + id;
+            const uri = '/api/clients/' + id;
             this.axios.delete(uri).then((res) => {
                 console.log(res.data);
                 EventBus.$emit('clients-changed');

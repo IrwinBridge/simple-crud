@@ -30,7 +30,7 @@ export default {
     methods: {
         saveClient() {
             if (this.isFormValid(this.client)) {
-                const uri = 'http://localhost:3000/api/clients/' + this.$props.id;
+                const uri = '/api/clients/' + this.$props.id;
                 delete this.client._id;
                 this.axios.put(uri, this.client)
                 .then((res) => {
@@ -40,6 +40,7 @@ export default {
                     EventBus.$emit('show-toast', 'Client was successfully updated');
                 })
                 .catch((err) => {
+                    console.log(err);
                     EventBus.$emit('form-errors', {
                         name: '',
                         email: 'Client with this email already exists',

@@ -5,14 +5,16 @@ function validateClient(body) {
         name: Joi.string().min(3).max(80).required(),
         email: Joi.string().email().required(),
         phone: Joi.string().required(),
-        providers: Joi.array().required()
+        providers: Joi.array().required(),
+        __v: Joi.allow()
     }
     return Joi.validate(body, schema);
 }
 
 function validateProvider(body) {
     const schema = {
-        name: Joi.string().min(3).max(80).required()
+        name: Joi.string().min(3).max(80).required(),
+        __v: Joi.allow()
     }
     return Joi.validate(body, schema);
 }

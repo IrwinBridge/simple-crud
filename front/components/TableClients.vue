@@ -56,7 +56,7 @@ export default {
     },
     methods: {
         fetchClients() {
-            const uri = 'http://localhost:3000/api/clients';
+            const uri = '/api/clients';
             this.axios.get(uri).then((res) => {
                 this.clients = res.data;
             });

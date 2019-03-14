@@ -57,14 +57,14 @@ export default {
     },
     methods: {
         fetchProviders() {
-            const uri = 'http://localhost:3000/api/providers';
+            const uri = '/api/providers';
             this.axios.get(uri).then((res) => {
                 this.providers = res.data;
             });
         },
         editProvider() {
             const _id = this.providerForChange._id;
-            const uri = 'http://localhost:3000/api/providers/' + _id
+            const uri = '/api/providers/' + _id
             delete this.providerForChange._id;
             this.axios.put(uri, this.providerForChange).then((res) => {
                 console.log(res.data);
@@ -77,7 +77,7 @@ export default {
             });
         },
         deleteProvider(id) {
-            const uri = 'http://localhost:3000/api/providers/' + id;
+            const uri = '/api/providers/' + id;
             this.axios.delete(uri).then((res) => {
                 console.log(res.data);
                 this.fetchProviders();

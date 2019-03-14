@@ -7,6 +7,11 @@ const SwaggerDocument = require('./swagger.json');
 const distpath = require('path');
 
 
+const port = process.env.PORT || 3000;
+const host = process.env.HOST || 'localhost';
+const mongo_server = process.env.MONGO_SERVER || 'mongodb://localhost/mongo';
+
+
 // Express
 const app = express();
 app.use(express.json());
@@ -14,7 +19,7 @@ app.use(express.static(distpath.resolve('dist/')));
 
 
 // Mongo
-mongoose.connect('mongodb://localhost/mongo', {useNewUrlParser: true});
+mongoose.connect(mongo_server, {useNewUrlParser: true});
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 const db = mongoose.connection;
@@ -47,5 +52,4 @@ app.delete('/api/providers/:id', ProvidersRouter.deleteProvider);
 
 
 // Listening
-const port = process.env.PORT || 3000;
-app.listen(port, () => { console.log(`Listening on port ${port}...`) });
+app.listen(port, host, () => { console.log(`Running on port http://${host}:${port}`) });

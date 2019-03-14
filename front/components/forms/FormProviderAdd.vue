@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         addProvider() {
-            const uri = 'http://localhost:3000/api/providers';
+            const uri = '/api/providers';
             this.error = '';
             this.axios.post(uri, this.newProvider)
             .then((res) => {

@@ -63,7 +63,7 @@ export default {
     methods: {
         getClient(id) {
             if (id != null) {
-                const uri = 'http://localhost:3000/api/clients/' + id;
+                const uri = '/api/clients/' + id;
                 this.axios.get(uri).then((res) => {
                     this.client = res.data;
                     this.clientProviders = this.client.providers.map((item) => { return item._id });

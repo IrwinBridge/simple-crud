@@ -35,7 +35,7 @@ export default {
     methods: {
         addClient() {
             if (this.isFormValid(this.client)) {
-                const uri = 'http://localhost:3000/api/clients';
+                const uri = '/api/clients';
                 this.axios.post(uri, this.client)
                 .then((res) => {
                     console.log(res.data);

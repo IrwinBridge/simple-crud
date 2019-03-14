@@ -50,8 +50,6 @@ export default {
             }
         };
     },
-    created() {
-    },
     mounted() {
         this.getClient(this.$props.id);
         EventBus
